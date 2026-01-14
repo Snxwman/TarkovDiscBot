@@ -54,7 +54,7 @@ class Weapon(WeaponDataMixin, Enum):
 
 
 
-#All Enum Classes for weapoons
+#MOVE ALL THIS INTO THE DATA CLASS
 class WeaponName(Enum):
 
     #ASSAULT CARBINES

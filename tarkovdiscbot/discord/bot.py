@@ -29,7 +29,7 @@ class TarkoIdleBot:
         TarkoIdleBot.arc_client = ArcGatewayClient(TarkoIdleBot.hikari_client)
         TarkoIdleBot.miru_client = MiruClient.from_arc(TarkoIdleBot.arc_client)
 
-        # TarkoIdleBot.arc_client.load_extensions_from('tarkovdiscbot/discord/commands')
+        TarkoIdleBot.arc_client.load_extensions_from('tarkovdiscbot/discord/commands')
 
         @TarkoIdleBot.hikari_client.listen()
         async def _(event: GuildJoinEvent):

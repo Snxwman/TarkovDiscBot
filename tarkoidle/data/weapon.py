@@ -1,7 +1,7 @@
-from tarkovdiscbot.models.inventory import GridSize
-from tarkovdiscbot.enums.items import ItemCategory, ItemSlot, ItemRarity
-from tarkovdiscbot.enums.traders import Traders
-from tarkovdiscbot.enums.weapon import FireMode, WeaponCaliber
+from tarkoidle.models.inventory import GridSize
+from tarkoidle.enums.items import ItemCategory, ItemSlot, ItemRarity
+from tarkoidle.enums.traders import Traders
+from tarkoidle.enums.weapon import FireMode, WeaponCaliber
 # category = enum
 # slot = enum
 # name = str

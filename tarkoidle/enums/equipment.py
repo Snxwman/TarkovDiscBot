@@ -1,6 +1,6 @@
 from enum import Enum
 from dataclasses import dataclass
-from tarkovdiscbot.enums.items import ItemRarity
+from tarkoidle.enums.items import ItemRarity
 
 class HelmetArmoredAreas(Enum):
     HEAD_TOP = 'Head top'

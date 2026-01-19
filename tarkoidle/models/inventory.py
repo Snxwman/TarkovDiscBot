@@ -1,13 +1,19 @@
-class Inventory:
-    ...
+from dataclasses import dataclass
 
 
-class ItemInventory:
-    ...
+@dataclass
+class GridSize:
+    height: int
+    width: int
+
+
+class Inventory: ...
+
+
+class ItemInventory: ...
 
 
 class PlayerInventory:
-    
     def __init__(self) -> None:
         self.headset: ItemInventory | None = None
         self.head: ItemInventory | None = None
@@ -22,8 +28,8 @@ class PlayerInventory:
         self.backpack: ItemInventory | None = None
         self.secure_container: ItemInventory | None = None
 
-class ContainerInventory:
-    ...
 
-class Stash:
-    ...
+class ContainerInventory: ...
+
+
+class Stash: ...

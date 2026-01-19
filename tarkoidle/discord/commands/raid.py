@@ -6,8 +6,8 @@ from arc import GatewayClient as ArcGatewayClient
 from arc import GatewayContext as ArcGatewayContext
 from arc import GatewayPlugin as ArcGatewayPlugin
 
-from tarkovdiscbot.discord.bot import TarkoIdleBot
-from tarkovdiscbot.utils.emoji import SPINNER
+from tarkoidle.discord.bot import TarkoIdleBot
+from tarkoidle.utils.emoji import SPINNER
 
 plugin = ArcGatewayPlugin('raid')
 arc_client = TarkoIdleBot.arc_client

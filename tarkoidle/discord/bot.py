@@ -8,6 +8,7 @@ from hikari import GatewayBot as HikariGatewayBot
 from hikari import GuildJoinEvent, GuildLeaveEvent, Intents
 from miru import Client as MiruClient
 
+EXTENSIONS_MODULE = 'tarkoidle/discord/commands'
 
 class TarkoIdleBot:
     hikari_client: HikariGatewayBot
@@ -29,17 +30,16 @@ class TarkoIdleBot:
         TarkoIdleBot.arc_client = ArcGatewayClient(TarkoIdleBot.hikari_client)
         TarkoIdleBot.miru_client = MiruClient.from_arc(TarkoIdleBot.arc_client)
 
-        TarkoIdleBot.arc_client.load_extensions_from('tarkovdiscbot/discord/commands')
+        TarkoIdleBot.arc_client.load_extensions_from(EXTENSIONS_MODULE)  # pyright: ignore [reportUnusedCallResult]
 
         @TarkoIdleBot.hikari_client.listen()
         async def _(event: GuildJoinEvent):
-            print(f'Bot joined guild: {event.guild_id}')
+            print(f'Bot joined guild: {event.guild_id}')  # TODO: Change to proper logger
 
         @TarkoIdleBot.hikari_client.listen()
         async def _(event: GuildLeaveEvent):
-            print(f'Bot left guild: {event.guild_id}')
+            print(f'Bot left guild: {event.guild_id}')  # TODO: Change to proper logger
 
     @staticmethod
     def run():
         TarkoIdleBot.hikari_client.run()
-

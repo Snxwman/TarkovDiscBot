@@ -31,7 +31,7 @@ import { emoji, gameInfo } from "../constants/";
 // QUESTION: Should there be some method of external TarkoIdle account ownership (eg. email login code)?
 // Would enable the following:
 //   - Playing the game on the same TarkoIdle account from multiple Discord accounts
-//   - Transfering TarkoIdle characters to other Discord accounts running commands for the same TarkoIdle account on different or
+//   - Transfering TarkoIdle characters to other Discord accounts
 //   - Recovering a TarkoIdle account in the event of Discord account access loss
 //   - Having components of the game outside of Discord (eg. complex raid control, better stash management, better UI, etc.)
 // Methods:
@@ -191,8 +191,7 @@ function EmailVerificationModal(email: string) {
 export const RegisterCommand = {
     data: new SlashCommandBuilder()
         .setName('register')
-        .setDescription('Register a new TarkoIdle account.')
-        .setDefaultMemberPermissions(0),
+        .setDescription('Register a new TarkoIdle account.'),
     // TODO: Username validation (eg. vulgar/banned words and invalid characters)
     // TODO: Return existing or created account to user
     async execute(interaction: CommandInteraction): Promise<void> {
